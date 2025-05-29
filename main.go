@@ -22,6 +22,22 @@ type Card struct {
 	Description string
 }
 
+type NumberCard struct {
+	Card
+	Number int
+}
+
+func NewNumberCard(number int, color int, description string) NumberCard {
+	return NumberCard{
+		Card: Card{
+			Cod:         fmt.Sprintf("#%d_%s", number, colorNames[color]),
+			Color:       color,
+			Description: description,
+		},
+		Number: number,
+	}
+}
+
 func main() {
 	fmt.Println("Hello, World!")
 }
