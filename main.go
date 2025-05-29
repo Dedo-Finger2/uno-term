@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+var colorNames = []string{
+	"YELLOW",
+	"RED",
+	"GREEN",
+	"BLUE",
+}
+
 const (
 	YELLOW = iota
 	RED
@@ -11,7 +18,6 @@ const (
 
 type Card struct {
 	Cod         string
-	Name        string
 	Color       int
 	Description string
 }
