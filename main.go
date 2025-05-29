@@ -9,6 +9,13 @@ const (
 	BLUE
 )
 
+type Card struct {
+	Cod         string
+	Name        string
+	Color       int
+	Description string
+}
+
 func main() {
 	fmt.Println("Hello, World!")
 }
