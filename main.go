@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 var colorNames = []string{
 	"YELLOW",
@@ -35,6 +38,21 @@ func NewNumberCard(number int, color int, description string) NumberCard {
 			Description: description,
 		},
 		Number: number,
+	}
+}
+
+func GetRandomCard() NumberCard {
+	color := rand.Intn(4)
+	cardNumber := rand.Intn(10)
+	cod := fmt.Sprintf("#%d_%s", cardNumber, colorNames[color])
+
+	return NumberCard{
+		Card: Card{
+			Cod:         cod,
+			Color:       color,
+			Description: "",
+		},
+		Number: cardNumber,
 	}
 }
 
